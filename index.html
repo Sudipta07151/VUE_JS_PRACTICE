@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<style>
+    .one{
+        color:green;
+        display: inline;
+    }
+    .two{
+        background-color: beige;
+        text-decoration: underline;
+    }
+    .canvas{
+        margin: 20px auto;
+        height: 500px;
+        width:500px;
+        background-color: #eee;
+
+    }
+</style>
+</head>
+<body>
+    <h1>Vue Basics</h1> 
+    <div id="app">
+        <h2>{{ title }}</h2>
+        <p>{{ greet('SUDIPTA') }}</p>
+        <a :href="site_URL">YOUTUBE</a>
+        <div :class="classes">CLASSES FROM INSTANCE</div>
+        <input type="text" :value="name">
+        <p>{{ name }} earns Rs:{{ wage }}</p>
+        <button v-on:click="wageManupulation(100)">Increase wage by Rs:100</button>
+        <button v-on:click="wageManupulation(-100)">Decrease wage by Rs:100</button>
+        <button v-on:dblclick="wageManupulation(500)">Iecrease wage by Rs:500</button>
+        <button v-on:dblclick="wageManupulation(-500)">Decrease wage by Rs:500</button>
+        <button @click="logEvent">LOG EVENT</button>
+        <div class="canvas" @mousemove="logCoords">
+            {{ coords.x }}, {{ coords.y }}
+        </div>
+    </div>   
+    <script src="app.js"></script>
+</body>
+</html>

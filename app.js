@@ -11,7 +11,15 @@ new Vue({
         coords:{
             x:0,
             y:0
-        }
+        },
+        showName:true,
+        showAge:true,
+        items:['RED','GREEN','YELLOW','PURPLE','GOLDEN'],
+        ninjas:[
+            {name:'crystal', age:25, belt:'orange'},
+            {name:'shrobana', age:22, belt:'black' },
+            {name:'samparna', age:23, belt:'yellow'}
+        ]
     },
     methods:{
         greet(name){
@@ -29,6 +37,23 @@ new Vue({
         },
         updateName(e){
             this.name=e.target.value;
+        },
+        logMessage(){
+            console.log('HI!')
+        },
+        toggleName(){
+            if(this.showName===true)
+            {
+                this.showName=false;
+            }
+            else
+            {
+                this.showName=true;
+            }
+        },
+        toggleAge(){
+            this.showAge=!this.showAge;
         }
+
     }
 })

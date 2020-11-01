@@ -21,6 +21,9 @@
         background-color: #eee;
 
     }
+    button{
+        display: block;
+    }
 </style>
 </head>
 <body>
@@ -44,6 +47,21 @@
         <input type="text" @keyup="updateName" placeholder="keyup">
         <input type="text" @keypress="updateName" placeholder="keypress">
         <input type="text" v-model="ninja_belt" placeholder="v_model_check">
+        <button @click.shift="logMessage">press-shift-MODIFIER</button>
+        <a @click.prevent="logMessage" href="https://www.thenetninja.co.uk/">NET NINJA WEBSITE</a>
+        <p v-if="showName">NINJA_CODER_SUDIPTA</p>
+        <p v-else-if="showAge" >23</p>
+        <button @click="toggleName">TOGGLE NAME:  {{ showName }}</button>
+        <button @click="toggleAge">TOGGLE Age:  {{ showAge }}</button>
+        <ul>
+            <li v-for="item in items">{{ item }}</li>
+        </ul>
+        <div v-for="(ninja, index) in ninjas">
+            {{ index+1 }}
+            <p>{{ ninja.name }}</p>
+            <p>{{ ninja.age }}</p>
+            <p>{{ ninja.belt }}</p>
+        </div>
     </div>  
 
     <script src="app.js"></script>

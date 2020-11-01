@@ -40,6 +40,8 @@
         <div class="canvas" @mousemove="logCoords">
             {{ coords.x }}, {{ coords.y }}
         </div>
+        <input type="text" @keyup="updateName" placeholder="keyup">
+        <input type="text" @keypress="updateName" placeholder="keypress">
     </div>   
     <script src="app.js"></script>
 </body>

@@ -32,6 +32,7 @@
         <div :class="classes">CLASSES FROM INSTANCE</div>
         <input type="text" :value="name">
         <p>{{ name }} earns Rs:{{ wage }}</p>
+        <p>I am a {{ ninja_belt }}belt NINJA</p>
         <button v-on:click="wageManupulation(100)">Increase wage by Rs:100</button>
         <button v-on:click="wageManupulation(-100)">Decrease wage by Rs:100</button>
         <button v-on:dblclick="wageManupulation(500)">Iecrease wage by Rs:500</button>
@@ -42,7 +43,9 @@
         </div>
         <input type="text" @keyup="updateName" placeholder="keyup">
         <input type="text" @keypress="updateName" placeholder="keypress">
-    </div>   
+        <input type="text" v-model="ninja_belt" placeholder="v_model_check">
+    </div>  
+
     <script src="app.js"></script>
 </body>
 </html>

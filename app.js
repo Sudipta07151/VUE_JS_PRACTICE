@@ -7,6 +7,7 @@ new Vue({
         classes:['one','two'],
         name:'SUDIPTA',
         wage:10000,
+        ninja_belt:'black',
         coords:{
             x:0,
             y:0
